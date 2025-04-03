@@ -2,8 +2,7 @@
 
 **My Portfolio Visualization Project in Power BI**
 
-![Dashboard Screenshot](https://github.com/user-attachments/assets/9e0807f8-cb9f-4910-8f68-ec333eab4b2f)  
-*[Add additional screenshots of key visuals if available]*
+![Dashboard Screenshot](https://github.com/user-attachments/assets/9e0807f8-cb9f-4910-8f68-ec333eab4b2f) 
 
 ---
 
@@ -41,7 +40,7 @@ To enhance the analysis, two tables were joined:
 
 A relationship was established (based on country fields) to enable filtering and comparison of power plant capacity alongside population and other country-level indicators.
 
-[Data Model Screenshot](https://github.com/user-attachments/assets/8694b401-658b-44ff-b24a-19c0bbc1cd7b)
+![Data Model Screenshot](https://github.com/user-attachments/assets/8694b401-658b-44ff-b24a-19c0bbc1cd7b)
 
 ---
 
