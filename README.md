@@ -17,17 +17,31 @@ This project aims to analyze global power plant data to identify key regions of 
 
 The **Global_power_plant_database** dataset includes the following fields:
 
-- **country (text):** 3-character country code according to ISO 3166-1 alpha-3.
-- **country_long (text):** Full country name.
-- **name (text):** Name or title of the power plant (generally in Romanized form).
-- **capacity_mw (number):** Electrical generating capacity in megawatts.
-- **latitude (number):** Geolocation (latitude) in decimal degrees (WGS84).
-- **longitude (number):** Geolocation (longitude) in decimal degrees (WGS84).
-- **primary_fuel (text):** Primary energy source used.
-- **owner (text):** Majority shareholder or owner of the power plant.
-- **source (text):** Data source (organization, report, or document).
+- **country (text):** 3-character country code according to ISO 3166-1 alpha-3.  
+- **country_long (text):** Full country name.  
+- **name (text):** Name or title of the power plant (generally in Romanized form).  
+- **capacity_mw (number):** Electrical generating capacity in megawatts.  
+- **latitude (number):** Geolocation (latitude) in decimal degrees (WGS84).  
+- **longitude (number):** Geolocation (longitude) in decimal degrees (WGS84).  
+- **primary_fuel (text):** Primary energy source used.  
+- **owner (text):** Majority shareholder or owner of the power plant.  
+- **source (text):** Data source (organization, report, or document).  
 
-Prior to analysis, data cleaning and formatting were performed: columns with incomplete or missing values were removed, and numeric values were formatted appropriately.
+Additionally, the project uses a **world_population** table, which provides data on population, area, capital, cintinent and other demographic indicators for different countries.  
+
+Before analysis, data cleaning and formatting were performed: columns with incomplete or missing values were removed, and numeric values were properly formatted. 
+
+---
+
+## Data Model and Relationships
+
+To enhance the analysis, two tables were joined:  
+1. **global_power_plant_database**  
+2. **world_population**
+
+A relationship was established (based on country fields) to enable filtering and comparison of power plant capacity alongside population and other country-level indicators.
+
+[Data Model Screenshot](https://github.com/user-attachments/assets/8694b401-658b-44ff-b24a-19c0bbc1cd7b)
 
 ---
 
@@ -35,16 +49,16 @@ Prior to analysis, data cleaning and formatting were performed: columns with inc
 
 Based on the data, the following key metrics were calculated (dynamically adjusted based on applied filters):
 
-- **Total Capacity** – the overall generating capacity.
-- **Count of Stations** – the number of power plants.
+- **Total Capacity** – the overall generating capacity.  
+- **Count of Stations** – the number of power plants.  
 - **Average Capacity** – the average capacity.
 
 ---
 
 ## Technologies Used
 
-- **BigQuery:** Data preparation and cleaning.
-- **Power BI:** Dashboard and visualization development.
+- **BigQuery:** Data preparation and cleaning.  
+- **Power BI:** Dashboard and visualization development.  
 - **DAX Functions:** Calculation of key performance indicators.
 
 ---
@@ -52,9 +66,9 @@ Based on the data, the following key metrics were calculated (dynamically adjust
 ## Visualization Tools
 
 The project features an interactive dashboard that:
-- **Displays** the distribution of generating capacity by country.
-- **Allows** filtering by fuel type and region.
-- **Includes** a table with details on the most powerful stations and key metrics.
+- **Displays** the distribution of generating capacity by country.  
+- **Allows** filtering by fuel type and region.  
+- **Includes** a table with details on the most powerful stations and key metrics.  
 - **Provides** a button to reset all filters.
 
 ---
@@ -67,4 +81,3 @@ You can view the live Power BI dashboard here:
 ---
 
 *Feel free to explore the project and leave feedback or suggestions for improvement!*
-
